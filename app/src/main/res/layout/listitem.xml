@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth=".1dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="130dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/image"
+                android:fontFamily="@font/sen_reg"
+
+                android:text="IM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/specs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/image"
+                android:fontFamily="@font/sen_reg"
+                android:text="15.6 inch OLED screen"
+                android:textColor="#CB515151"
+                android:textSize="14sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ratingcard"
+                android:layout_width="58dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/specs"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/image"
+                app:cardBackgroundColor="@color/purple_500">
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sen_bold"
+                    android:text="4.64"
+                    android:textColor="@color/white" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratingcard"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/image"
+                android:fontFamily="@font/sen_bold"
+                android:text="60000.0"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
